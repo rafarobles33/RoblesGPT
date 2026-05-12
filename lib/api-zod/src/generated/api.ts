@@ -14,3 +14,23 @@ import * as zod from "zod";
 export const HealthCheckResponse = zod.object({
   status: zod.string(),
 });
+
+/**
+ * Sends the full conversation history and returns the AI response
+ * @summary Send a message to the AI
+ */
+export const SendMessageBody = zod.object({
+  messages: zod
+    .array(
+      zod.object({
+        role: zod.enum(["user", "assistant"]),
+        content: zod.string(),
+      }),
+    )
+    .describe("Full conversation history including the new user message"),
+});
+
+export const SendMessageResponse = zod.object({
+  message: zod.string(),
+  role: zod.enum(["assistant"]),
+});
