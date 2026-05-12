@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
@@ -67,74 +68,76 @@
 }
 
 :root, .dark {
-  --background: 240 10% 4%;
-  --foreground: 0 0% 98%;
+  /* Deep black base */
+  --background: 160 20% 3%;
+  --foreground: 160 10% 95%;
 
-  --card: 240 10% 4%;
-  --card-foreground: 0 0% 98%;
-  --card-border: 240 3.7% 15.9%;
+  --card: 160 15% 5%;
+  --card-foreground: 160 10% 95%;
+  --card-border: 160 30% 12%;
 
-  --sidebar: 240 10% 4%;
-  --sidebar-foreground: 0 0% 98%;
-  --sidebar-border: 240 3.7% 15.9%;
-  --sidebar-primary: 262.1 83.3% 57.8%;
-  --sidebar-primary-foreground: 210 20% 98%;
-  --sidebar-accent: 240 3.7% 15.9%;
-  --sidebar-accent-foreground: 0 0% 98%;
-  --sidebar-ring: 240 4.9% 83.9%;
+  --sidebar: 160 15% 5%;
+  --sidebar-foreground: 160 10% 95%;
+  --sidebar-border: 160 30% 12%;
+  --sidebar-primary: 168 80% 42%;
+  --sidebar-primary-foreground: 160 20% 4%;
+  --sidebar-accent: 160 15% 10%;
+  --sidebar-accent-foreground: 160 10% 95%;
+  --sidebar-ring: 168 60% 35%;
 
-  --popover: 240 10% 4%;
-  --popover-foreground: 0 0% 98%;
-  --popover-border: 240 3.7% 15.9%;
+  --popover: 160 15% 5%;
+  --popover-foreground: 160 10% 95%;
+  --popover-border: 160 30% 12%;
 
-  --primary: 262.1 83.3% 57.8%;
-  --primary-foreground: 210 20% 98%;
+  /* Aqua-green primary */
+  --primary: 168 80% 42%;
+  --primary-foreground: 160 20% 4%;
 
-  --secondary: 240 3.7% 15.9%;
-  --secondary-foreground: 0 0% 98%;
+  --secondary: 160 15% 10%;
+  --secondary-foreground: 160 10% 90%;
 
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
+  --muted: 160 12% 8%;
+  --muted-foreground: 160 10% 55%;
 
-  --accent: 240 3.7% 15.9%;
-  --accent-foreground: 0 0% 98%;
+  --accent: 160 20% 10%;
+  --accent-foreground: 168 80% 55%;
 
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --ring: 240 4.9% 83.9%;
+  --border: 160 25% 12%;
+  --input: 160 15% 8%;
+  --ring: 168 70% 42%;
 
-  --chart-1: 220 70% 50%;
-  --chart-2: 160 60% 45%;
-  --chart-3: 30 80% 55%;
-  --chart-4: 280 65% 60%;
-  --chart-5: 340 75% 55%;
+  --chart-1: 168 80% 42%;
+  --chart-2: 180 60% 45%;
+  --chart-3: 150 60% 40%;
+  --chart-4: 200 65% 50%;
+  --chart-5: 140 55% 38%;
 
   --app-font-sans: 'Inter', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: Menlo, monospace;
-  --radius: 0.75rem;
+  --radius: 0.85rem;
 
-  --shadow-2xs: 0px 2px 0px 0px hsl(240 10% 2% / 0.1);
-  --shadow-xs: 0px 2px 0px 0px hsl(240 10% 2% / 0.1);
-  --shadow-sm: 0px 2px 0px 0px hsl(240 10% 2% / 0.1), 0px 1px 2px -1px hsl(240 10% 2% / 0.1);
-  --shadow: 0px 2px 0px 0px hsl(240 10% 2% / 0.1), 0px 1px 2px -1px hsl(240 10% 2% / 0.1);
-  --shadow-md: 0px 2px 0px 0px hsl(240 10% 2% / 0.1), 0px 2px 4px -1px hsl(240 10% 2% / 0.1);
-  --shadow-lg: 0px 2px 0px 0px hsl(240 10% 2% / 0.1), 0px 4px 6px -1px hsl(240 10% 2% / 0.1);
-  --shadow-xl: 0px 2px 0px 0px hsl(240 10% 2% / 0.1), 0px 8px 10px -1px hsl(240 10% 2% / 0.1);
-  --shadow-2xl: 0px 2px 0px 0px hsl(240 10% 2% / 0.1);
-  
+  --shadow-2xs: 0px 2px 0px 0px hsl(160 20% 2% / 0.2);
+  --shadow-xs: 0px 2px 4px 0px hsl(160 20% 2% / 0.3);
+  --shadow-sm: 0px 2px 4px 0px hsl(160 20% 2% / 0.3), 0px 1px 2px -1px hsl(160 20% 2% / 0.2);
+  --shadow: 0px 4px 8px 0px hsl(160 20% 2% / 0.4), 0px 1px 2px -1px hsl(160 20% 2% / 0.3);
+  --shadow-md: 0px 4px 12px 0px hsl(160 20% 2% / 0.4), 0px 2px 4px -1px hsl(160 20% 2% / 0.3);
+  --shadow-lg: 0px 8px 24px 0px hsl(160 20% 2% / 0.5), 0px 4px 6px -1px hsl(160 20% 2% / 0.4);
+  --shadow-xl: 0px 16px 40px 0px hsl(160 20% 2% / 0.6), 0px 8px 10px -1px hsl(160 20% 2% / 0.5);
+  --shadow-2xl: 0px 24px 60px 0px hsl(160 20% 2% / 0.7);
+
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
-  --button-outline: rgba(255,255,255, .10);
-  --badge-outline: rgba(255,255,255, .05);
+  --button-outline: rgba(52, 211, 153, 0.12);
+  --badge-outline: rgba(52, 211, 153, 0.06);
 
-  --opaque-button-border-intensity: 9;
-  --elevate-1: rgba(255,255,255, .04);
-  --elevate-2: rgba(255,255,255, .09);
+  --opaque-button-border-intensity: 8;
+  --elevate-1: rgba(52, 211, 153, 0.04);
+  --elevate-2: rgba(52, 211, 153, 0.08);
 
   --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
   --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
@@ -143,6 +146,13 @@
   --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
   --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
   --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Liquid glass variables */
+  --glass-bg: rgba(10, 26, 20, 0.55);
+  --glass-border: rgba(52, 211, 153, 0.15);
+  --glass-highlight: rgba(52, 211, 153, 0.08);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(52, 211, 153, 0.1);
+  --glass-blur: blur(20px) saturate(160%);
 }
 
 @layer base {
@@ -152,5 +162,78 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    background-image:
+      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(20, 100, 70, 0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 80%, rgba(10, 80, 55, 0.14) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(52, 211, 153, 0.04) 0%, transparent 70%);
+    background-attachment: fixed;
   }
+}
+
+/* Liquid glass utility */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-subtle {
+  background: rgba(8, 20, 15, 0.45);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba(52, 211, 153, 0.1);
+}
+
+.glass-input {
+  background: rgba(5, 15, 10, 0.6);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(52, 211, 153, 0.18);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(52, 211, 153, 0.08);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.glass-input:focus-within {
+  border-color: rgba(52, 211, 153, 0.45);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4), 0 0 0 1px rgba(52, 211, 153, 0.2), inset 0 1px 0 rgba(52, 211, 153, 0.12);
+}
+
+.glass-bubble-user {
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.25) 0%, rgba(16, 160, 110, 0.30) 100%);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(52, 211, 153, 0.25);
+}
+
+.glass-bubble-ai {
+  background: rgba(8, 20, 14, 0.5);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba(52, 211, 153, 0.12);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25), inset 0 1px 0 rgba(52, 211, 153, 0.06);
+}
+
+.glass-header {
+  background: rgba(5, 14, 10, 0.7);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(52, 211, 153, 0.12);
+}
+
+.glass-footer {
+  background: rgba(5, 14, 10, 0.65);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-top: 1px solid rgba(52, 211, 153, 0.1);
+}
+
+/* Glow pulse for the send button */
+.glow-primary {
+  box-shadow: 0 0 16px rgba(52, 211, 153, 0.35), 0 2px 8px rgba(0,0,0,0.4);
+}
+.glow-primary:hover {
+  box-shadow: 0 0 24px rgba(52, 211, 153, 0.5), 0 4px 12px rgba(0,0,0,0.5);
 }

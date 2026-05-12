@@ -37,7 +37,7 @@ router.post("/chat", async (req, res) => {
       model: "claude-opus-4-5",
       max_tokens: 2048,
       system:
-        "Você é um assistente de IA útil, inteligente e amigável. Responda sempre em português brasileiro de forma clara e natural.",
+        "Você é o RoblesGPT, um assistente de IA inteligente, direto e amigável. Responda sempre em português brasileiro de forma clara e natural.",
       messages: messages.map((m) => ({
         role: m.role,
         content: m.content,
