@@ -1,11 +1,11 @@
 import { Router } from "express";
-import Anthropic from "@anthropic-ai/sdk";
+import Groq from "groq-sdk";
 import { z } from "zod";
 
 const router = Router();
 
-const client = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
+const client = new Groq({
+  apiKey: process.env.GROQ_API_KEY,
 });
 
 const ChatMessageSchema = z.object({
@@ -27,32 +27,36 @@ router.post("/chat", async (req, res) => {
 
   const { messages } = parsed.data;
 
-  if (!process.env.ANTHROPIC_API_KEY) {
-    res.status(500).json({ error: "ANTHROPIC_API_KEY não configurada" });
+  if (!process.env.GROQ_API_KEY) {
+    res.status(500).json({ error: "GROQ_API_KEY não configurada" });
     return;
   }
 
   try {
-    const response = await client.messages.create({
-      model: "claude-opus-4-5",
+    const response = await client.chat.completions.create({
+      model: "llama-3.3-70b-versatile",
       max_tokens: 2048,
-      system:
-        "Você é o RoblesGPT, um assistente de IA inteligente, direto e amigável. Responda sempre em português brasileiro de forma clara e natural.",
-      messages: messages.map((m) => ({
-        role: m.role,
-        content: m.content,
-      })),
+      messages: [
+        {
+          role: "system",
+          content:
+            "Você é o RoblesGPT, um assistente de IA inteligente, direto e amigável. Responda sempre em português brasileiro de forma clara e natural.",
+        },
+        ...messages.map((m) => ({
+          role: m.role as "user" | "assistant",
+          content: m.content,
+        })),
+      ],
     });
 
-    const text =
-      response.content[0].type === "text" ? response.content[0].text : "";
+    const text = response.choices[0]?.message?.content ?? "";
 
     res.json({ message: text, role: "assistant" });
   } catch (err: unknown) {
-    req.log.error({ err }, "Erro ao chamar Anthropic API");
+    req.log.error({ err }, "Erro ao chamar Groq API");
     const msg =
-      err instanceof Anthropic.APIError
-        ? `Erro da API Anthropic: ${err.message}`
+      err instanceof Groq.APIError
+        ? `Erro da API Groq: ${err.message}`
         : "Erro interno ao processar sua mensagem";
     res.status(500).json({ error: msg });
   }
